@@ -26,7 +26,7 @@ urlpatterns = [
 
     path('summernote/', include('django_summernote.urls')),
 
-    path("academy/", academy_main),
+    path("", academy_main),
     path("academy/main/", academy_main),
     path("academy/search/", academy_course_search),
     path("academy/course/<str:slug>/", academy_course),
