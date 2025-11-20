@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = "django-insecure-c3)*%2y8f6(vgi6q_$ds0yv$br)twix&_$i(9c$%a)u!@d2efh"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 ALLOWED_HOSTS = ['*']
 # ALLOWED_HOSTS = ['aifreeteam.com', 'www.aifreeteam.com']
-CSRF_TRUSTED_ORIGINS = ['https://aifreeteam.com', 'https://www.aifreeteam.com']
+# CSRF_TRUSTED_ORIGINS = ['https://aifreeteam.com', 'https://www.aifreeteam.com']
 
 # Application definition
 
@@ -38,10 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-    "web",
-    "blogpost",
     "django_summernote",
-    "course",
     "academy"
 ]
 
