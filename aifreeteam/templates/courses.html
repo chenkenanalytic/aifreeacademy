@@ -1,0 +1,145 @@
+<!doctype html>{% load static %}
+<html class="no-js" lang="zxx">
+<head>
+    
+    <title>AI . FREE Team Official Website</title>
+    <meta name="description" content="">
+    {% include 'default/head.html' %}
+    <style type="text/css">
+        .color_AI {
+            color: #3fb0f0;
+            font-weight : bold;
+        }
+        
+        .color_FREE {
+            color: #8dcd49!important ;
+            font-weight : bold;
+        }
+        
+        .color_TEAM {
+            color: #a5a5a5;
+            font-weight : bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/static/bootstrap/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    {% include 'default/header.html' %}
+    <main>
+        <!--? slider Area Start-->
+        <section class="slider-area slider-area2">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height2">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-8 col-lg-11 col-md-12">
+                                <div class="hero__caption hero__caption2">
+                                    <h1 data-animation="bounceIn" data-delay="0.2s" style="display: inline;">
+                                        <span class="color_AI" style="display: inline;color: #3fb0f0;">AI</span>
+                                        <span class="color_TEAM" style="display: inline;color: #a5a5a5;"> . </span>
+                                        <span class="color_FREE" style="display: inline;color: #8dcd49!important ;">FREE</span>
+                                        <span class="color_TEAM" style="display: inline;color: #a5a5a5;">Courses</span>
+                                    </h1>
+                                    <!-- breadcrumb Start-->
+                                    <nav aria-label="breadcrumb">
+                                        <ol class="breadcrumb" style="background-color: transparent; color: black;">
+                                            <li class="breadcrumb-item"><a href="/">Home</a></li>
+                                            <li class="breadcrumb-item"><a href="/courses">Courses</a></li> 
+                                        </ol>
+                                    </nav>
+                                    <!-- breadcrumb End -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+        </section>
+        <!--? Blog Area Start-->
+        <section class="blog_area section-padding">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 mb-5 mb-lg-0">
+                        <div class="blog_left_sidebar">
+                            {% for lesson in cur_lessons %}
+                            <article class="blog_item">
+                                <div class="blog_item_img">
+                                    <img class="card-img rounded-0" src="{{ lesson.bar_img_link }}" alt="">
+                                    <a href="/course/{{ lesson.slug }}" class="blog_item_date">
+                                        <h3 style="margin:10px">{{ lesson.pub_date|date:"m/d" }}</h3>
+                                    </a>
+                                </div>
+                                <div class="blog_details">
+                                    <a class="d-inline-block" href="/course/{{ lesson.slug }}">
+                                        <h2 class="blog-head" style="color: #2d2d2d;">{{ lesson.title }}</h2>
+                                    </a>
+                                    <p>{{ lesson.subtitle }}</p>
+                                    <ul class="blog-info-link">
+                                        <li><i class="fa fa-user"></i>{{ lesson.author.first_name }} | <a onclick="/courses/?category={{ lesson.column.all.0.name }}">{{ lesson.column.all.0.name }}</a></li>
+                                        <!-- <li><a href="#"><i class="fa fa-comments"></i> 03 Comments</a></li> -->
+                                    </ul>
+                                </div>
+                            </article>
+                            {% endfor %}
+                            
+                            <nav class="blog-pagination justify-content-center d-flex">
+                                <ul class="pagination">
+                                    <li class="page-item">
+                                        <a class="page-link" aria-label="Previous" {% if paging == 1 %}disabled{% else %}onclick="page_function({{ paging }}-1)"{% endif %}>
+                                            <i class="ti-angle-left"></i>
+                                        </a>
+                                    </li>
+                                    {% for p in pages %}
+                                    <li class="page-item">
+                                        <a class="page-link" onclick="page_function({{ paging }})">{{ paging }}</a>
+                                    </li>
+                                    {% endfor %}
+                                    <li class="page-item">
+                                        <a class="page-link" aria-label="Next" {% if paging == pages_max %}disabled{% else %}onclick="page_function({{ paging }}+1)"{% endif %}>
+                                            <i class="ti-angle-right"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    {% include 'default/course_sidebar.html' %}
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Blog Area End -->
+    </main>
+    {% include 'default/footer.html' %}
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+{% include 'default/js.html' %}
+
+<script type="text/javascript">
+
+  let page = params.get('page')
+
+  function page_function(page_select) {
+    urlParams.set('page', page_select);
+    window.location.search = urlParams;
+  };
+</script>
+</body>
+</html>

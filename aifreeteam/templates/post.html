@@ -1,0 +1,179 @@
+<!doctype html>{% load static %}
+<html class="no-js" lang="zxx">
+<head>
+    
+    <title>AI . FREE Team Official Website</title>
+    <meta name="description" content="">
+    {% include 'default/head.html' %}
+    <style type="text/css">
+        .color_AI {
+            color: #3fb0f0;
+            font-weight : bold;
+        }
+        
+        .color_FREE {
+            color: #8dcd49!important ;
+            font-weight : bold;
+        }
+        
+        .color_TEAM {
+            color: #a5a5a5;
+            font-weight : bold;
+        }
+        p {
+         color: black;
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/static/bootstrap/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    {% include 'default/header.html' %}
+    <main>
+        <!--? slider Area Start-->
+   <section class="slider-area slider-area2">
+     <div class="slider-active">
+       <!-- Single Slider -->
+       <div class="single-slider slider-height2">
+         <div class="container">
+           <div class="row">
+             <div class="col-xl-8 col-lg-11 col-md-12">
+               <div class="hero__caption hero__caption2">
+                 <h1 data-animation="bounceIn" data-delay="0.2s" style="color:black;">{{ post.title }}</h1>
+                 <!-- breadcrumb Start-->
+                 <nav aria-label="breadcrumb">
+                   <ol class="breadcrumb" style="background-color: transparent; color: black;">
+                     <li class="breadcrumb-item"><a href="/">Home</a></li>
+                     <li class="breadcrumb-item"><a href="/blog">Blog</a></li>
+                     <li class="breadcrumb-item"><a href="#">{{ post.column.all.0.name }}</a></li> 
+                  </ol>
+               </nav>
+               <!-- breadcrumb End -->
+            </div>
+         </div>
+      </div>
+   </div>          
+</div>
+</div>
+</section>
+<!--? Blog Area Start -->
+<section class="blog_area single-post-area section-padding">
+   <div class="container">
+      <div class="row">
+         <div class="col-lg-8 posts-list">
+            <div class="single-post">
+               <div class="feature-img">
+                  <img class="img-fluid" src="{{ post.bar_img_link }}" alt="">
+               </div>
+               <div class="blog_details">
+                  <p style="color: gray;">{{ post.subtitle }}</p>
+                  <ul class="blog-info-link mt-3 mb-4">
+                     <li><i class="fa fa-user"></i>{{ post.author.first_name }}</li>
+                     <li><i class="fa fa-comments"></i>{{ post.pub_date|date }}</li>
+                  </ul>
+                  <br>
+                  {{ post.content | safe }}
+               </div>
+            </div>
+            <div class="navigation-top">
+               <div class="d-sm-flex justify-content-between text-center">
+                  <p class="like-info"></p>
+
+                  <ul class="social-icons">
+                     <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                     <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                     <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
+                     <li><a href="#"><i class="fab fa-behance"></i></a></li>
+                  </ul>
+               </div>
+               <div class="navigation-area">
+                  <div class="row">
+                     <div class="col-lg-6 col-md-6 col-12 nav-left flex-row d-flex justify-content-start align-items-center">
+                     {% if prev_post %}
+                     <div class="col-4 thumb" style="background-color:white;">
+                        <a href="/post/{{ prev_post.0.slug }}">
+                           <img class="img-fluid" src="{{ prev_post.0.img_link }}" alt="">
+                        </a>
+                     </div>
+                     <div class="arrow">
+                        <a href="/post/{{ prev_post.0.slug }}">
+                           <span class="lnr text-gray ti-arrow-left" style="color:black;"></span>
+                        </a>
+                     </div>
+                     <div class="detials">
+                        <p>上一篇</p>
+                        <a href="/post/{{ prev_post.0.slug }}">
+                           <h4 style="color: #2d2d2d;">{{ prev_post.0.title }}</h4>
+                        </a>
+                     </div>
+                     {% endif %}
+                  </div>
+                  <div class="col-lg-6 col-md-6 col-12 nav-right flex-row d-flex justify-content-end align-items-center">
+                  {% if next_post %}
+                  <div class="detials">
+                     <p>下一篇</p>
+                     <a href="/post/{{ next_post.0.slug }}">
+                        <h4 style="color: #2d2d2d;">{{ next_post.0.title }}</h4>
+                     </a>
+                  </div>
+                  
+                  <div class="col-4 thumb" style="background-color:white;">
+                     <a href="/post/{{ next_post.0.slug }}">
+                        <img class="img-fluid" src="{{ next_post.0.img_link }}" alt="">
+                     </a>
+                  </div>
+                  <div class="arrow">
+                     <a href="/post/{{ next_post.0.slug }}">
+                        <span class="lnr text-gray ti-arrow-right"  style="color:black;"></span>
+                     </a>
+                  </div>
+                  {% endif %}
+               </div>
+            </div>
+         </div>
+      </div>
+      <div class="blog-author">
+         <div class="media align-items-center">
+            <img src="/static/bootstrap/assets/img/logo/logo.png" alt="" style="border-radius:0px">
+            <div class="media-body">
+               <a href="#">
+                  <h4 class="color_TEAM"><span class="color_AI">AI</span>
+                     . 
+                    <span class="color_FREE">FREE</span>
+                    <span class="color_TEAM">Team</span>
+                     - 自由團隊
+                  </h4>
+               </a>
+               <p style="color:gray;">我們是一群對 AI 技術擁抱熱情的同好，將打造一個專屬的 AI 社群，<br>提供我們的客戶/學員最完善的技術資源。</p>
+            </div>
+         </div>
+      </div>
+   </div>
+{% include 'default/blog_sidebar.html' %}
+</div>
+</div>
+</section>
+<!-- Blog Area End -->
+</main>
+    {% include 'default/footer.html' %}
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+{% include 'default/js.html' %}
+
+</body>
+</html>

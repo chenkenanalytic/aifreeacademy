@@ -1,0 +1,533 @@
+<!doctype html>{% load static %}
+<html class="no-js" lang="zxx">
+<head>
+    
+    <title>AI . FREE Team Official Website</title>
+    <meta name="description" content="">
+    {% include 'default/head.html' %}
+    <style type="text/css">
+        .color_AI {
+            color: #3fb0f0;
+            font-weight : bold;
+        }
+        
+        .color_FREE {
+            color: #8dcd49!important ;
+            font-weight : bold;
+        }
+        
+        .color_TEAM {
+            color: #a5a5a5;
+            font-weight : bold;
+        }
+        .btn {
+            background: #8dcd49;
+            font-size: 18px;
+        }
+        .btn::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 101%;
+            height: 101%;
+            background: #3fb0f0;
+            z-index: 1;
+            border-radius: 5px;
+            transition: transform 0.5s;
+            transition-timing-function: ease;
+            transform-origin: 0 0;
+            transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+            transform: scaleX(0);
+            border-radius: 0px
+        }
+    </style>
+
+</head>
+
+<body>
+    <!-- ? Preloader Start -->
+    <div id="preloader-active">
+        <div class="preloader d-flex align-items-center justify-content-center">
+            <div class="preloader-inner position-relative">
+                <div class="preloader-circle"></div>
+                <div class="preloader-img pere-text">
+                    <img src="/static/bootstrap/assets/img/logo/loder.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Preloader Start -->
+    {% include 'default/header.html' %}
+    <main>
+        <!--? slider Area Start-->
+        <section class="slider-area ">
+            <div class="slider-active">
+                <!-- Single Slider -->
+                <div class="single-slider slider-height d-flex align-items-center">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-xl-6 col-lg-7 col-md-12">
+                                <div class="hero__caption">
+                                    <h1 data-animation="fadeInLeft" data-delay="0.2s" style="color: black;">透過 人工智慧<br> 實踐轉型</h1>
+                                    <p data-animation="fadeInLeft" data-delay="0.4s" style="color: gray;">自由團隊協助企業導入人工智慧、輔導學員拓展個人職涯，<br>提供全方位教育訓練、顧問諮詢、客製化技術開發等服務。</p>
+                                    <a href="/story" class="btn hero-btn" data-animation="fadeInLeft" data-delay="0.7s">認識自由團隊</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>          
+                </div>
+            </div>
+        </section>
+        <!-- ? services-area -->
+        <div class="services-area">
+            <div class="container">
+                <div class="row justify-content-sm-center">
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="/static/bootstrap/assets/img/icon/icon1.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>累積授課1000+學員人數</h3>
+                                <p>團隊授課人數已逾千人，不僅授課師資陣容堅強，技術/顧問團隊組成來自各產業 AI 領域資深工作者。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="/static/bootstrap/assets/img/icon/icon2.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>累積30+企業客製化AI專案</h3>
+                                <p>客戶跨足產、官、學界，技術包含：資料科學、機器學習、電腦視覺、自然語言處理、大規模語言模型、AI繪圖等。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-6 col-sm-8">
+                        <div class="single-services mb-30">
+                            <div class="features-icon">
+                                <img src="/static/bootstrap/assets/img/icon/icon3.svg" alt="">
+                            </div>
+                            <div class="features-caption">
+                                <h3>超過2000+AI人脈認證</h3>
+                                <p>團隊深耕 AI 領域逾五年，除開源技術資源外，曾參與多項政府計畫、AI 競賽等，串聯多方 AI 領域人脈資源。</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Courses area start -->
+        <div class="courses-area section-padding40 fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>我們的服務項目</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-actives">
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="/post/training"><img src="/static/bootstrap/assets/img/gallery/featured1_0417.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <h1><strong>教育訓練</strong></h3>
+                                <p>自由團隊累積多年的授課經歷，課程包括：</p>
+                                    <p><i class="fas fa-star"></i>   專業培訓 - 個人的應用/技術課程</p>
+                                    <p><i class="fas fa-star"></i>   實務應用 - 企業 AI 應用/技術課程</p>
+                                    <p><i class="fas fa-star"></i>   量身打造 - 客製化課程、講座、工作坊</p>
+                                <p>打造客戶/學員最佳的學習體驗。</p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                </div>
+                                <a href="/post/training" class="border-btn border-btn2">深入瞭解</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="/post/consulting"><img src="/static/bootstrap/assets/img/gallery/featured2_0417.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <h1><strong>顧問諮詢</strong></h3>
+                                <p>自由團隊提供各式的企業/個人服務：</p>
+                                    <p><i class="fas fa-star"></i>   企業 - 落地技術發展、團隊建立/媒合</p>
+                                    <p><i class="fas fa-star"></i>   個人 - 職涯發展諮詢、證照與培訓</p>
+                                    <p><i class="fas fa-star"></i>   其他 - 各式客製化諮詢服務</p>
+                                <p>突破走進 AI 領域的門檻與藩籬。</p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                </div>
+                                <a href="/post/consulting" class="border-btn border-btn2">深入瞭解</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="/post/customization"><img src="/static/bootstrap/assets/img/gallery/featured3_0417.png" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <h1><strong>專案開發</strong></h3>
+                                <p>自由團隊具備多元且全面的 AI 軟體技術：</p>
+                                    <p><i class="fas fa-star"></i>   資料科學 - 數據蒐集/分析/視覺化</p>
+                                    <p><i class="fas fa-star"></i>   人工智慧 - 電腦視覺/自然語言處理</p>
+                                    <p><i class="fas fa-star"></i>   語言模型 - 智能問答/內部知識詢答</p>
+                                <p>引導企業走向智能化轉型的新契機。</p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                </div>
+                                <a href="/post/customization" class="border-btn border-btn2">深入瞭解</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Courses area End -->
+        <!--? About Area-1 Start -->
+        <section class="about-area1 fix pt-10">
+            <div class="support-wrapper align-items-center">
+                <div class="left-content1">
+                    <div class="about-icon">
+                        <img src="/static/bootstrap/assets/img/icon/about.svg" alt="">
+                    </div>
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-55">
+                        <div class="front-text">
+                            <h2 class="">
+                                <span class="color_AI">AI</span>
+                                 . 
+                                <span class="color_FREE">FREE</span>
+                                <span class="color_TEAM">Team</span>
+                            </h2>
+                            <h2>
+                                <span>讓你跟 AI 的距離不再遙遠</span>
+                            </h2>
+                            <p>自由團隊讓 AI 技術不再遙不可及，</p>
+                            <p>透過結構化的課程規劃，我們的學員可以實戰開發 AI 專案、應用 AI；</p>
+                            <p>企業客戶能夠將需求藍圖，實際讓 AI 技術落地、藉以優化營運績效。</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="/static/bootstrap/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>零基礎入門、無領域背景可</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="/static/bootstrap/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>客製化教育訓練 & 專案開發</p>
+                        </div>
+                    </div>
+
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="/static/bootstrap/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>最新市場技術研究與應用</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-content1">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="{% static '/bootstrap/assets/img/gallery/about2_0417.png' %}" alt="">
+
+                        <div class="video-icon" >
+                            <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=7YfXNg0B_eU"><i class="fas fa-play"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+        <!-- Courses area start -->
+        <div class="courses-area section-padding40 fix">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>近期課程資訊</h2>
+                        </div>
+                    </div>
+                </div>
+                <div class="courses-actives">
+                    {% for course in courses %}
+                    <!-- Single -->
+                    <div class="properties pb-20">
+                        <div class="properties__card">
+                            <div class="properties__img overlay1">
+                                <a href="/course/{{ course.slug }}"><img src="{{ course.bar_img_link }}" alt=""></a>
+                            </div>
+                            <div class="properties__caption">
+                                <p>| {% for cate in course.cate.all %}{{ cate.name }} | {% endfor %}</p>
+                                <h3><a href="/course/{{ course.slug }}">{{ course.title }}</a></h3>
+                                <p>{{ course.subtitle }}
+                                </p>
+                                <div class="properties__footer d-flex justify-content-between align-items-center">
+                                    <div class="restaurant-name">
+                                        <div class="rating">
+                                            <!-- <i class="fas fa-star"></i> -->
+                                            <!-- <i class="fas fa-star"></i> -->
+                                            <!-- <i class="fas fa-star"></i> -->
+                                            <!-- <i class="fas fa-star"></i> -->
+                                            <!-- <i class="fas fa-star-half"></i> -->
+                                            {% for i in stars %}
+                                            <i class="fas fa-star"></i>
+                                            {% endfor %}
+                                            {% if half_star %}
+                                            <i class="fas fa-star-half"></i>
+                                            {% endif %}
+                                        </div>
+                                        <p><span>({{ course.rating }})</span> - 公開課程評價</p>
+                                    </div>
+                                    <div class="price">
+                                        <span>$ {{ course.price }}</span>
+                                    </div>
+                                </div>
+                                <a href="/course/{{ course.slug }}" class="border-btn border-btn2">進一步瞭解</a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- Single -->
+                    {% endfor %}
+                    
+                </div>
+            </div>
+        </div>
+        <!-- Courses area End -->
+        <!--? About Area-3 Start -->
+        <section class="about-area3 fix">
+            <div class="support-wrapper align-items-center">
+                <div class="right-content3">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="/static/bootstrap/assets/img/gallery/about3_0417.png" alt="">
+                    </div>
+                </div>
+                <div class="left-content3">
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-20">
+                        <div class="front-text">
+                            <h2 class="">你最佳的 AI 技術夥伴</h2>
+                        </div>
+                    </div>
+                    <p>自由團隊將打造一個專屬的 AI 社群，提供我們的客戶/學員最完善的技術資源。</p>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="/static/bootstrap/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>掌握各式 AI 技術</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="/static/bootstrap/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>跟近最新 AI 技術趨勢</p>
+                        </div>
+                    </div>
+                    <div class="single-features">
+                        <div class="features-icon">
+                            <img src="/static/bootstrap/assets/img/icon/right-icon.svg" alt="">
+                        </div>
+                        <div class="features-caption">
+                            <p>顧問諮詢/職涯諮詢/人才媒合</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+        <!--? top subjects Area Start -->
+        <div class="topic-area section-padding40">
+            <div class="container">
+                <div class="row justify-content-center">
+                    <div class="col-xl-7 col-lg-8">
+                        <div class="section-tittle text-center mb-55">
+                            <h2>開源資源</h2>
+                            <p>掌握最新 AI 動向，追蹤趨勢技術
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic1_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/Python-Basics" target="_blank">Python 入門</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic2_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/Machine-Learning-Basic" target="_blank">機器學習 入門</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic3_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/AI-Introduction" target="_blank">AI 入門</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic4_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/Generative-AI-Industrial-Case-Study" target="_blank">生成式 AI 入門</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic5_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/Traditional-Chinese-Handwriting-Dataset" target="_blank">繁體中文手寫字集</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic6_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/TTS-AIGO" target="_blank">原住民語音合成實戰</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic7_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/deepfakes_practice" target="_blank">DeepFakes 換臉實戰</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-4 col-sm-6">
+                        <div class="single-topic text-center mb-30">
+                            <div class="topic-img">
+                                <img src="/static/bootstrap/assets/img/gallery/topic8_0417.png" alt="">
+                                <div class="topic-content-box">
+                                    <div class="topic-content">
+                                        <h3 style="background-color: rgba(0, 0, 0, 0.8);width: 100%;"><a href="https://github.com/AI-FREE-Team/Data-Analytics-in-Practice-Titanic" target="_blank">鐵達尼號生存預測實戰</a></h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-12">
+                        <div class="section-tittle text-center mt-20">
+                            <a href="https://github.com/AI-FREE-Team" class="border-btn" target="_blank">查看更多開源專案</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- top subjects End -->
+        
+        <!--? About Area-2 Start -->
+        <section class="about-area2 fix pb-padding">
+            <div class="support-wrapper align-items-center">
+                <div class="right-content2">
+                    <!-- img -->
+                    <div class="right-img">
+                        <img src="/static/bootstrap/assets/img/blog/slide_thumb_0417.png" alt="">
+                    </div>
+                </div>
+                <div class="left-content2">
+                    <!-- section tittle -->
+                    <div class="section-tittle section-tittle2 mb-20">
+                        <div class="front-text">
+                            <h2 class="">想在 AI 的浪潮中，<br>取得優勢嗎？</h2>
+                            <p style="display: inline-block;">坊間有許多AI供應商，為什麼要選擇 
+                                <h3 style="display: inline-block;">&nbsp;
+                                    <span class="color_AI">AI</span>
+                                     . 
+                                    <span class="color_FREE">FREE</span>
+                                    <span class="color_TEAM">Team</span> ?
+                                </h3><br>
+                            </p>
+                            <p>自由團隊成立的初衷，有個偉大的理想：
+                                <br>「讓 AI 技術能夠自由地被學習與應用」。
+                                <br>
+                                <br>我們相信 AI 可以改善人類的生活，
+                                <br>無論是透過學習 AI 讓個人職涯更上一層樓、
+                                <br>或是協助企業開發落地的 AI 技術，提升企業競爭力。
+                                <br>
+                                <br>若您對我們初衷感興趣，歡迎進一步與我們聯繫，
+                                <br>讓我們一起探索 AI 的極限！
+                            </p><br>
+                            <a href="/contact" class="btn" style="padding:16px !important">聯繫我們</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Area End -->
+    </main>
+    {% include 'default/footer.html' %}
+  <!-- Scroll Up -->
+  <div id="back-top" >
+    <a title="Go to Top" href="#"> <i class="fas fa-level-up-alt"></i></a>
+</div>
+
+{% include 'default/js.html' %}
+
+</body>
+</html>
