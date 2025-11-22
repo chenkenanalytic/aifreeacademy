@@ -190,6 +190,14 @@
     .badge-complete {
       background-color: var(--accent-color);
     }
+    .page-container { /* 這個是你的最外層容器，這裡用 body 作為範例 */
+      display: flex;
+      flex-direction: column; /* 將子元素垂直堆疊 */
+      min-height: 100vh; /* 確保容器至少佔滿整個視窗高度 */
+    }
+    .container {
+      flex-grow: 1;
+    }
   </style>
   {% if messages %}
     <script>
